@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url(./Images/bgImage.jpg);
+  height: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title,
+.number {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #d0d0d0;
+}
+
+.number {
+  font-size: 6rem;
+}
+
+.commands {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commands > div {
+  margin: 0 2rem;
+  border: 2px solid #d0d0d0;
+  color: #d0d0d0;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+}
+
+.commands > div:hover {
+  background-color: black;
+  color: white;
+}
+
+.modal > * {
+  display: none;
+}
+
+div.active {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+div.active > h2.italic {
+  display: block;
+  font-family: cursive;
+  font-style: italic;
+  margin: 3rem 0;
+  color: bisque;
+  font-weight: 200;
+}
+
+div.active > .zikr {
+  display: block;
+  font-family: cursive;
+  font-size: 2em;
+  color: burlywood;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.active > .start {
+  display: block;
+  font-family: cursive;
+  color: #d0d0d0;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 20%;
+  margin: 20px auto;
+}
+
+div.active > .start:hover {
+  color: aqua;
+}
+@media screen and (max-width: 920px) {
+  html {
+    font-size: 13px;
+  }
+
+  .commands {
+    flex-direction: column-reverse;
+  }
+  .commands > div {
+    margin: 10px 0;
+  }
+  div.active {
+    height: 60vh;
+  }
+  div.active > .start {
+    margin: 20px 30%;
+  }
+}
